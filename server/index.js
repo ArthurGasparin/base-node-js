@@ -4,6 +4,7 @@ import homepageRouter from "./homepageRouter.js"
 import assetsRouter from "./assetsRouter.js"
 import routes from "../routes/routes.js"
 import dotenv from 'dotenv'
+
 dotenv.config()
 
 const port = process.env.APP_PORT || 3000
@@ -12,14 +13,14 @@ const distPath = path.join(path.resolve(), "dist")
 
 const app = express()
 
+routes(app)
+
 if (process.env.APP_ENV === "production") {
     app.use("/", express.static(distPath))
 } else {
     app.use("/", express.static(publicPath))
     app.use("/src", assetsRouter)
 }
-
-routes(app)
 
 app.use(homepageRouter)
 
