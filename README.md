@@ -1,6 +1,6 @@
-# google_maps
+# base-node-js
 
-This template should help get you started developing with Vue 3 in Vite.
+This template should help get you started developing with Vue 3 in Vite and NodeJS.
 
 ## Recommended IDE Setup
 
