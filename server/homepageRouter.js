@@ -4,7 +4,7 @@ import path from "path";
 
 const router = express.Router();
 
-const environment = process.env.NODE_ENV;
+const environment = process.env.APP_ENV;
 
 router.get("/*", async (_req, res) => {
     const data = {
